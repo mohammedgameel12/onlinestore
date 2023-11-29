@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Html Project</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+<script src="jquery-3.5.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://www.paypal.com/signin?returnUri=https%3A%2F%2Fwww.paypal.com%2Fmerchantapps%2Fmyapps">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"> 
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600&display=swap" rel="stylesheet"> 
+	<style>
+		*
+		{
+			box-sizing: border-box;
+			font-family: 'Montserrat', sans-serif;
+			color: #213c70
+		}
+		body
+		{
+			margin: 0px;
+			background-color: #f5efe7;
+			padding: 60px;
+		}
+		.container
+		{
+			text-align: center;
+		}
+		.menu-logo
+		{
+			width: 25%;
+			display: inline-table;
+			padding: 10px;
+		}
+		.search-bar
+		{
+			width: 40%;
+			display: inline-table;
+		}
+		.cart-profile
+		{
+			width: 25%;
+			display: inline-table;
+		}
+		.logo
+		{
+			width: 60px;
+			height: 60px;
+			vertical-align: middle;
+			display: inline-block;
+		}
+		.button
+		{
+			padding: 10px;
+			font-family: 'Montserrat', sans-serif;
+			display: inline-block;
+			cursor: pointer;
+		}
+		.bars
+		{
+			vertical-align: text-bottom;
+			width: 21px;
+		}
+		.field
+		{
+			width: 90%;
+			padding: 10px;
+			border-radius: 20px;
+			border: unset;
+			font-size: 15px;
+		}
+		.num
+		{
+			background-color: #fff;
+			border-radius: 50%;
+			padding: 13px 17px;
+			box-shadow: 2px 2px 5px #0003;
+		}
+		.cart
+		{
+			display: inline-block;
+		}
+		.profile
+		{
+			display: inline-block;
+			box-shadow: 0px 0px 5px #0003;
+			width: 80px;
+			height: 41px;
+			background-color: #fff;
+			border-radius: 20px;
+			text-align: left;
+			margin-left: 20px;
+		}
+		.profileo
+		{
+			display: none;
+			box-shadow: 0px 0px 5px #0003;
+			width: 200px;
+			height: 41px;
+			background-color: #fff;
+			border-radius: 20px;
+			text-align: left;
+			margin-left: 20px;
+		}
+		.me
+		{
+			width: 40px;
+			height: 40px;
+			vertical-align: middle;
+			display: inline-block;
+			margin-right: 18px;
+		}
+		.caret
+		{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.sec-head
+		{
+			font-family: 'Shippori Mincho', serif;
+			color: #000;
+			margin: 30px 0px 0px 0px;
+			font-size: 20px;
+		}
+		.main-head
+		{
+			font-family: 'Shippori Mincho', serif;
+			color: #000;
+			margin: 0px;
+			font-size: 40px;
+		}
+		.container2
+		{
+			margin-top: 20px;
+		}
+		.col
+		{
+			width: 430px;
+			display: inline-table;
+			padding: 40px;
+			padding-top: 88px;
+			padding-right: 80px;
+			background-color: #fff;
+			border-radius: 15px;
+		}
+		.article
+		{
+			font-size: 12px;
+			line-height: 20px;
+			color: #000;
+		}
+		.logores
+		{
+			display: none;
+		}
+		.but
+		{
+			color: #000;
+			border-radius: 10px;
+			padding: 10px;
+			border: solid 1px;
+			width: 170px;
+			margin-top: 50px;
+		}
+		.unvis
+		{
+			font-size: 15px;
+			color: #0006;
+		}
+		.sml
+		{
+			padding: 0px;
+			list-style-type: none;
+			display: inline-table;
+			vertical-align: middle;
+		}
+		.link
+		{
+			text-decoration: none;
+			padding: 15px;
+			background-color: #fff;
+			border-radius: 15px;
+			display: block;
+			width: 230px;
+		}
+		.tol
+		{
+			float: right;
+		}
+		li
+		{
+			display: block;
+			padding: 7px;
+		}
+		.colored
+		{
+			background-image: linear-gradient(to top, rgba(225, 239, 249, 0.2), rgba(196, 212, 232, 0.65) 100%, rgb(174, 190, 218)), linear-gradient(rgb(186, 201, 227), rgb(251, 235, 239));
+			box-shadow: 0px 0px 5px #0003;
+		}
+		.arrowr
+		{
+			display: inline-table;
+			vertical-align: middle;
+			width: 10%;
+		}
+		.le
+		{
+			display: inline-table;
+			margin-right: 30px;
+		}
+		.justi
+		{
+			vertical-align: middle;
+			margin-right: 10px;
+		}
+		.thumb
+		{
+			display: inline-table;
+		}
+		.imgo
+		{
+			width: 260px;
+			height: 260px;
+			border-radius: 20px;
+			margin-right: 20px;
+		}
+		.cap
+		{
+			position: absolute;
+			padding: 20px;
+		}
+		.catalog
+		{
+			text-align: center;
+		}
+		.arror
+		{
+			width: 25px;
+			float: right;
+		}
+		@media only screen and (max-width: 1250px) {
+			.sml
+			{
+				display: flex;
+				justify-content: center;
+			}
+			.colored
+			{
+				margin-right: 100px;
+			}
+			.container2
+			{
+				text-align: center;
+			}
+			.imgo
+			{
+				width: 400px;
+				height: 400px;
+			}
+		}
+		@media only screen and (max-width: 1101px) {
+			body
+			{
+				padding: 30px;
+			}
+			.col
+			{
+				width: 90%;
+				text-align: center;
+			}
+			.colored
+			{
+				margin: 0px auto 30px auto;
+			}
+			.container2
+			{
+				text-align: center;
+			}
+			.but
+			{
+				margin: 50px auto 0px auto;
+			}
+			.arrowr
+			{
+				width: 40px;
+			}
+			.res
+			{
+				margin: 0px 50px;
+				float: unset;
+			}
+			.imgo
+			{
+				width: 320px;
+				height: 320px;
+			}
+			.all
+			{
+				text-align: center;
+			}
+			.logo
+			{
+				display: none;
+			}
+			.logores
+			{
+				display: block;
+				margin: 30px auto;
+			}
+			.profile
+			{
+				display: none;
+			}
+			.profileo
+			{
+				display: block;
+				margin: 20px auto;
+			}
+			.me
+			{
+				margin-right: 130px;
+			}
+		}
+		@media only screen and (max-width: 560px) {
+			body
+			{
+				padding: 10px;
+			}
+			.le
+			{
+				font-size: 31px;
+			}
+			.arrowr
+			{
+				width: 26px;
+			}
+			.lo
+			{
+				font-size: 30px;
+			}
+			.link
+			{
+				width: 100%;
+				text-align: center;
+				display: block;
+			}
+			.sml
+			{
+				display: block;
+				margin-top: 20px;
+			}
+			.profileo
+			{
+				width: 80px;
+			}
+			.me
+			{
+				margin-right: 18px;
+			}
+			.men
+			{
+				display: none;
+			}
+			.button
+			{
+				background-color: #fff;
+				border-radius: 30px;
+				box-shadow: 0px 0px 5px #0003;
+			}
+		}
+		@media only screen and (max-width: 1000px) {
+			.sml
+			{
+				display: block;
+				margin-top: 30px;
+			}
+			.link
+			{
+				display: block;
+				width: 100%;
+				height: 100px;
+				display: grid;
+			}
+			.justi
+			{
+				margin-right: auto;
+				margin-left: auto;
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<img src="logo.png" class="logores">
+	<br>
+	<div class="profileo">
+			<img src="me.png" class="me"><span class="caret"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABmJLR0QA/wD/AP+gvaeTAAAAy0lEQVQYlWNgoDZgljJO4xJRtgn48OjkNWwKFG3yQ7lE9R8wiyjbljEwME4XlDVn+/D45D4URdb5rQyMjJNYWFm/M4tom576/4vZgIGRIVlQzpz3w6OTuyAmFbQwMDJWMzAy7Pr9lzGfkYGBgUHBoYGD8c+HDQwMDO6MjAwTGBgYGP7/ZyhgYGDY+Z9FIODBgYYfjDBrtLUb2L4JfljDwMDgCxWCK2JgYGBgRHaTimcu+58vTOsYGBgYWHj+Bd3ZPvknnoBoYIJgMgEAFWk6CJYeSmQAAAAASUVORK5CYII="></span>
+		</div>
+	<div class="menu-logo">
+		<img src="logo.png" class="logo">
+		<div class="button"><img class="bars" alt="svgImg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMjQiIGhlaWdodD0iMjQiCnZpZXdCb3g9IjAgMCAxNzIgMTcyIgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDE3MnYtMTcyaDE3MnYxNzJ6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iIzIxM2M3MCI+PHBhdGggZD0iTTE0LjMzMzMzLDM1LjgzMzMzdjE0LjMzMzMzaDE0My4zMzMzM3YtMTQuMzMzMzN6TTE0LjMzMzMzLDc4LjgzMzMzdjE0LjMzMzMzaDE0My4zMzMzM3YtMTQuMzMzMzN6TTE0LjMzMzMzLDEyMS44MzMzM3YxNC4zMzMzM2gxNDMuMzMzMzN2LTE0LjMzMzMzeiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+"/><span class="men">&nbsp;&nbsp;MENU</span></div>
+	</div>
+	<div class="search-bar">
+		<input type="text" class="field" placeholder="Search">
+	</div>
+	<div class="cart-profile">
+		<div class="cart">
+			CART <span class="num">0</span>
+		</div>
+		<div class="profile">
+			<img src="me.png" class="me"><span class="caret"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABmJLR0QA/wD/AP+gvaeTAAAAy0lEQVQYlWNgoDZgljJO4xJRtgn48OjkNWwKFG3yQ7lE9R8wiyjbljEwME4XlDVn+/D45D4URdb5rQyMjJNYWFm/M4tom576/4vZgIGRIVlQzpz3w6OTuyAmFbQwMDJWMzAy7Pr9lzGfkYGBgUHBoYGD8c+HDQwMDO6MjAwTGBgYGP7/ZyhgYGDY+Z9FIODBgYYfjDBrtLUb2L4JfljDwMDgCxWCK2JgYGBgRHaTimcu+58vTOsYGBgYWHj+Bd3ZPvknnoBoYIJgMgEAFWk6CJYeSmQAAAAASUVORK5CYII="></span>
+		</div>
+	</div>
+</div>
+<div class="all">
+	<h2 class="sec-head">Good Evening</h2>
+	<h1 class="main-head">Christin Beck</h1>
+</div>
+	<br><br>
+	<div class="container2">
+		<div class="col colored">
+			<h1 class="main-head lo">Create invoice</h1>
+			<p class="article">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum leo urna.
+			</p>
+			<div class="but">
+				CREATE INVOICE
+			</div>
+		</div>
+		<div class="col">
+			<h1 class="main-head le">My Invoices</h1>
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAABXUlEQVRoge2WPUoDQRSAvxdzgdQGEr2EQswBxMIfCDaCnV3MHiVqo9YqSBrvIIHYWqhVCKsHyAFWn4VsjKJmZyXOSN7XzcCD75vmDRiGYRiGYcwu4lugUotWC8IpgArNwXX7ymW+MB0tB4E3+TJQFqVTrbW2neano5WbooicuUR4D1ChCSRjV04Rc9PRys4w7j2UKsv3wBbvD1oQkc1SZak/jG9uf5r3HgAwjHt3X0WArE+KCCIA8kcEEwD5IoIKAPeI4ALALWK0iRfr0RrKicL8H/u6kqjQSDf2aA+ocvwP5AGKohymB++L7LeMAl6UPeDJo0tWEhX204P33+h3LKy0GiAXQHHs+lmU3X63fZ5eBBmQVR4CDHCRh8ACXOUhoIA88hBIQF55CCCgWo82ROnwUT5R1Z1B9+By0rz3RSbKETnlIYCATzjJQwABYz+ARxUaLvKGYRiGYRizzisGHaxUsjWGFgAAAABJRU5ErkJggg==" class="arrowr">
+			<br><br><br>
+			<h1 class="main-head res" style="display: inline-table;">
+			377<span class="unvis"><br>INVOICES</span>
+		    </h1>
+		    <h1 class="main-head res tol" style="display: inline-table;">
+			4<span class="unvis"><br>OUTSTANDING</span>
+		    </h1>
+		</div>
+		<ul class="sml">
+			<li><a href="#" class="link"><img class="justi" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAACHklEQVRIidWVQUiTYRjHf8/3zYwgUaIOSs5ND9EtKdPcIMiLlNChomtBl8Zok25ReZCO0xAHRXbqEESHovCQRJhSzDpFRGRTC+tQViBErrl/hy0aU77pOvk/vs/z/P7P+7w8vLDRZWtJCoTiPaBeYF++SCkgkZ64+qBcrVsuoSkcu2KQFCwb3ANeCdsDFqlrbK/68eH544pvUOj8PtiIuzUbmR4dWgJo6Y5WZxfdpMFpQz1eN3G8+1ev4H0xHGB6dGgJX20ESOdkcS9CGQP2OqZHxfC/mn3S9wsYM8u/S6UGSOaRYwaoYgNDU4JDLd3R6tJY08G+zUCXxIuKDYCEQXN20U0WgP/g2e9JUMBxSHg3WUaBUKwfuACkgbHCWLpAAbD+mYmBi/9lABAMnTuSk8XNaAOQSDkOifTTwYdrqd/YWjGiYDh2GHFN0LBO0PyyODM3OThafO5bkZmHfzXs1noMhLod4zqw09NAUG+ykfTkwOX1GAQ740syXSo9X20PPgqC64EDyFEz8LmsgaS7mI43dfa2rxXuPxDrQBwDbpbGVvwHNf7WlOE7aqZYrX+/uyMYer0w++znauCWcHR7jb/jvGPcAHu3xZc59WV2KlOcs+qiNbRFtm2qrhpGnABywEuMGeX0yXHMJOoxAohW8lO4k8n8PjufGl4oZXlucmM4utvFPYkIg3aB1RVC34C3JhtfdnV7bnzwjRdnY+sPqrO7MwLfyeUAAAAASUVORK5CYII="> MY PROFILE</a></li>
+			<li><a href="#" class="link"><img class="justi" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAC70lEQVRIib2TzWtUZxTGf+e9V0zUiHFhxSaZuVYoFoSuJCaTwUWNEg2Utq6iLusmMonZZCVZSQSbZkT/gWrd6M5EW3Uh40RbQYKF4ipzM/mgSlFiWpoQ5r6ni/lgZpyZTIT22Vzu+R2e574vz4X/WFI+2BuJtSnmGIAxcm8mMTZfD6srwIvGoli5A2zPjZYx2usn4okK7C+MnvAT8UStAFPyZuU7QRaMMW2ChoBFVC7nGbAoaCjHFgqs7gDYr8rkTGJsPpWMzyFMonyWZ6hMpJLxuQqsqtyy95ciHPc6hq4BoMFx4Pc8Q/REFVZngNEhtdzBBLO5yTJGe/MMK5VZDb3Xok+i51utBtmmiPNTcVNqsXUDwl2xoyiflxxIzFpq98KV8Ks9X5SzgoE10/6T7+/XDPA6Brsx+vN7VOUGyvWKrGRPu/2p+INKyAVQx7aLCuruaJx9NLJavBDuil2oyg6PNEhmaUUNh4CKAQbAqBiAcoP12OyjkVVBQ2Gn+WK1w5XXtG6Fov2ese6wQk86s/SRFxl4LTAZmMyldOKqX3KCjSrcFTtqrPsb8C3Qouit7JOzxrovvI7B7g8OCEX7PVG5DWzLz2aT8b6ilSaM3vY6hkLFAcsArZ39e8oNVXgDsO/wuRYAY93hYvMqahInM1wIsOgUgCPO6fJNsfIUIAjcM7lRzzrm2Q9T6YGiH82LDEwARxS9EGhw3RhXBU5bggnHOhcRenau/LP1beOWvxFu+Y/HT1UzD0diPwrytZ8cbyi0SBo29+nq2g2BUVfcUTQ7NziNWzatnVrJbPrhz8atrQ76GqXPiwwU7t1PjosXGdCynDQU1TT18NI7oNfrGjwo0GktK+rIr+nE2HRu5StOnnS8Pz6+R7Y9ta8I7pZcUb3K9f8F0FTjBMuCHkgl43PORgPepZ8tNbcceo7wJbAZYEdb+6cCB/LmqH7jT8WnATYcALA0/8tMc0vnTTG2AWSXwEFgUeGmQfvy5v+L/gWD6js6M0hFGQAAAABJRU5ErkJggg=="> MY CUSTOMERS</a></li>
+			<li><a href="#" class="link"><img class="justi" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAACR0lEQVRIid2VPUxTYRSGn3NvUwwJAWJi/En0FtjYHNTYW2XQGHXkb2JwNsjthD+JYZK4aAvEROOixIUEBkPi4iClRUlkZDHYCzg4KcEmhpbeexgwpUXILYKDvuN5z/mek+98P/CvS4ISIrbTo+jxUoEarpt5PFaeY9l9twS5DSiqg24mOVI1wLKdBYHmspDnphOhUgPReAzRFMgkqADXDMO3P6eGZgCMIMBiOtGCL1eA3K+QWZFgEAO0dqW+3azz2gFRz7i4ZQcoYjs9GDoJLKI83+6Lahhgfn6gsPBmOL8ZpKYqQFPUuQO8AKbMdc9WQ78AflBT5doZ0NlpWrbzRIUHqLyqXWm4vjA7/EPFGwW9sRdAaHug5Wpvjfc1NAraCTLkZurjMOADLKVGXMD9Y8CJMzcPF3Oh14KeRbXXzSRKx81qcxqkKF2Ir1JzaCz79uFqNYDSFlltjhUOh9KCf1qUrvKzvLk4c6BPUXnmr+Xnmi711+8JIEXegRwRuJzNJCYqsta1G2jyfc4bhh8VaNa1Qnc1gLIt0vuC+SGbfvTpty5Ejino0kziPUDEdlTKbndVADedfFlNwV5VMWTLjvcJ2g+AMOhOJ4b3CyjNIBKNxwRNAB9B5lCSzTEnemCArTelocOsK3YAoj4XDgwQ9KbsG/C3VBqyihRQpbV1IJw/+U28HKDkd/NUpBBUVwEQ9VOKyM/G1XFypgAqpj+1i4eB7uaV6qDs81hZnl1uPHXuO9AFHAXuZqeTEzt6qvey6eR4UN3/oQ0ONhDQsRiBRQAAAABJRU5ErkJggg=="> MY STATS</a></li>
+			<li><a href="#" class="link"><img class="justi" alt="svgImg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMjQiIGhlaWdodD0iMjQiCnZpZXdCb3g9IjAgMCAxNzIgMTcyIgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDE3MnYtMTcyaDE3MnYxNzJ6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iIzIxM2M3MCI+PHBhdGggZD0iTTg2LDE4LjE0MDYzYy0zNy4zNTYyNSwwIC02Ny44NTkzNywzMC41MDMxMyAtNjcuODU5MzcsNjcuODU5MzhjMCwzNy4zNTYyNSAzMC41MDMxMyw2Ny44NTkzOCA2Ny44NTkzOCw2Ny44NTkzOGMzNy4zNTYyNSwwIDY3Ljg1OTM4LC0zMC41MDMxMiA2Ny44NTkzOCwtNjcuODU5MzdjMCwtMzcuMzU2MjUgLTMwLjUwMzEyLC02Ny44NTkzNyAtNjcuODU5MzcsLTY3Ljg1OTM3ek04NiwyNi4yMDMxM2MzMi45MjE4OCwwIDU5Ljc5Njg4LDI2Ljg3NSA1OS43OTY4OCw1OS43OTY4OGMwLDMyLjkyMTg4IC0yNi44NzUsNTkuNzk2ODggLTU5Ljc5Njg3LDU5Ljc5Njg4Yy0zMi45MjE4NywwIC01OS43OTY4NywtMjYuODc1IC01OS43OTY4NywtNTkuNzk2ODdjMCwtMzIuOTIxODcgMjYuODc1LC01OS43OTY4NyA1OS43OTY4OCwtNTkuNzk2ODd6TTg2LDQxLjY1NjI1Yy0yLjI4NDM3LDAgLTQuMDMxMjUsMS43NDY4NyAtNC4wMzEyNSw0LjAzMTI1djMzLjMyNjA1Yy0yLjQxODc1LDEuMzQzNzUgLTQuMDMxMjUsNC4wMzAyIC00LjAzMTI1LDYuOTg2NDVjMCw0LjQzNDM4IDMuNjI4MTIsOC4wNjI1IDguMDYyNSw4LjA2MjVjMi45NTYyNSwwIDUuNjQyNywtMS42MTI1IDYuOTg2NDUsLTQuMDMxMjVoMTkuODg4NTVjMi4yODQzNywwIDQuMDMxMjUsLTEuNzQ2ODggNC4wMzEyNSwtNC4wMzEyNWMwLC0yLjI4NDM3IC0xLjc0Njg4LC00LjAzMTI1IC00LjAzMTI1LC00LjAzMTI1aC0xOS44ODg1NWMtMC42NzE4NywtMS4yMDkzNyAtMS43NDU4MywtMi4yODMzMyAtMi45NTUyLC0yLjk1NTJ2LTMzLjMyNjA1YzAsLTIuMjg0MzggLTEuNzQ2ODgsLTQuMDMxMjUgLTQuMDMxMjUsLTQuMDMxMjV6Ij48L3BhdGg+PC9nPjwvZz48L3N2Zz4="/> MY SCHEDULE</a></li>
+		</ul>
+	</div>
+	<h2 class="sec-head" style="font-size: 30px;">Catalog
+		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAABXUlEQVRoge2WPUoDQRSAvxdzgdQGEr2EQswBxMIfCDaCnV3MHiVqo9YqSBrvIIHYWqhVCKsHyAFWn4VsjKJmZyXOSN7XzcCD75vmDRiGYRiGYcwu4lugUotWC8IpgArNwXX7ymW+MB0tB4E3+TJQFqVTrbW2neano5WbooicuUR4D1ChCSRjV04Rc9PRys4w7j2UKsv3wBbvD1oQkc1SZak/jG9uf5r3HgAwjHt3X0WArE+KCCIA8kcEEwD5IoIKAPeI4ALALWK0iRfr0RrKicL8H/u6kqjQSDf2aA+ocvwP5AGKohymB++L7LeMAl6UPeDJo0tWEhX204P33+h3LKy0GiAXQHHs+lmU3X63fZ5eBBmQVR4CDHCRh8ACXOUhoIA88hBIQF55CCCgWo82ROnwUT5R1Z1B9+By0rz3RSbKETnlIYCATzjJQwABYz+ARxUaLvKGYRiGYRizzisGHaxUsjWGFgAAAABJRU5ErkJggg==" class="arror">
+	</h2>
+	<br><br>
+	<div class="catalog">
+		<div class="thumb">
+			<p class="cap" style="color: #000;">DIAMONDS</p>
+			<img src="diamond.jpg" class="imgo">
+		</div>
+		<div class="thumb">
+			<p class="cap" style="color: #fff;">JEWELRY</p>
+			<img src="jewelry.jpg" class="imgo">
+		</div>
+		<div class="thumb">
+			<p class="cap" style="color: #000;">WATCHES</p>
+			<img src="watches.jpg" class="imgo">
+		</div>
+		<div class="thumb">
+			<p class="cap" style="color: #fff;"></p>
+			<img src="idont.jpg" class="imgo">
+		</div>
+	</div>
+</body>
+</html>
